@@ -1,0 +1,214 @@
+/* ========================
+   RESET Y ESTILO GENERAL
+======================== */
+* {
+    box-sizing: border-box; /* Incluye padding y border dentro del ancho total */
+    margin: 0; /* Quitar márgenes por defecto */
+    padding: 0; /* Quitar padding por defecto */
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif; /* Fuente principal */
+    background-color: #397559; /* Color de fondo general (opcional, solo si no hay imagen) */
+    color: #333; /* Color de texto por defecto */
+    line-height: 1.6; /* Altura de línea para mejorar lectura */
+}
+
+/* ========================
+   FONDO DE PANTALLA PARA INICIO
+======================== */
+body.inicio {
+    background-image: url('../assets/fondo1.jpg'); /* Imagen de fondo solo en inicio */
+    background-size: cover; /* La imagen ocupa todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* No se repite la imagen */
+    background-attachment: fixed; /* La imagen se queda fija al hacer scroll */
+    color: white; /* Texto blanco para que contraste con la imagen */
+}
+
+body.inicio::before {
+    content: ""; /* Pseudo-elemento vacío */
+    position: fixed; /* Fijo en la pantalla */
+    top: 0; left: 0; /* Posición superior izquierda */
+    width: 100%; height: 100%; /* Ocupa toda la pantalla */
+    background-color: rgba(0,0,0,0.4); /* Filtro oscuro para que el texto se lea */
+    z-index: -1; /* Colocado detrás del contenido */
+}
+
+/* ========================
+   HEADER Y NAVEGACIÓN
+======================== */
+header {
+    background-color: #010f01; /* Fondo del header */
+    padding: 15px 0; /* Espaciado vertical */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave debajo del header */
+}
+
+nav ul {
+    list-style: none; /* Quitar viñetas de la lista */
+    display: flex; /* Mostrar los elementos en fila */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    gap: 30px; /* Separación entre enlaces */
+}
+
+nav a {
+    color: white; /* Color de los enlaces */
+    text-decoration: none; /* Quitar subrayado */
+    font-weight: bold; /* Texto en negrita */
+    transition: color 0.3s; /* Transición suave al cambiar color */
+}
+
+nav a:hover {
+    color: #c8e6c9; /* Color al pasar el mouse */
+}
+
+/* ========================
+   MAIN Y SECCIONES
+======================== */
+main {
+    padding: 40px 20px; /* Espaciado interno del main */
+}
+
+section {
+    background-color: white; /* Fondo blanco para todas las secciones */
+    max-width: 800px; /* Ancho máximo de la sección */
+    margin: 30px auto; /* Centrar sección horizontalmente y margen superior/inferior */
+    padding: 30px; /* Espacio interno de la sección */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra suave alrededor */
+    text-align: center; /* Texto centrado */
+}
+
+section img {
+    display: block; /* Imagen como bloque */
+    margin: 20px auto; /* Centrada horizontalmente con margen superior/inferior */
+    max-width: 100%; /* No exceda el ancho del contenedor */
+    height: auto; /* Mantiene proporción de la imagen */
+    border-radius: 10px; /* Bordes redondeados de la imagen */
+}
+
+/* ========================
+   SECCIÓN DE SERVICIOS SIN FONDO
+======================== */
+section.servicios {
+    text-align: left; /* Texto alineado a la izquierda */
+    color: #333; /* Color del texto */
+    padding: 60px 40px; /* Espacio interno vertical y horizontal */
+    /* flex-direction: column; eliminado porque no se usa flexbox */
+}
+
+/* ========================
+   H1 Y P
+======================== */
+h1 {
+    color: #118017; /* Color principal de los títulos */
+    font-size: 2.5rem; /* Tamaño de fuente grande */
+    margin-bottom: 15px; /* Separación debajo del título */
+}
+
+p {
+    font-size: 1.1rem; /* Tamaño de fuente de párrafos */
+    color: #555; /* Color gris oscuro */
+}
+/* ========================
+   BOTONES (Contactanos)
+======================== */
+button {
+    background-color: #1e5c21; /* Fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    padding: 12px 25px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de mano */
+    font-weight: bold; /* Texto en negrita */
+    margin-top: 20px; /* Margen superior */
+    transition: background-color 0.3s; /* Transición suave al cambiar color */
+}
+
+button:hover {
+    background-color: #628163; /* Color al pasar el mouse */
+}
+
+
+/* ========================
+   TABLAS MODERNAS
+======================== */
+table {
+    width: 100%;
+    max-width: 800px; /* Tamaño de la tabla */ 
+    margin: 30px auto;
+    border-collapse: separate;
+    border-spacing: 0; /* Quitar la linea del medio de la tabla */
+    border-radius: 16px; /* Los bordes de la tabla sin esquinas */
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Poner sombra en la tabla    */ 
+}
+/* Encabezado de la tabla  */ 
+table {
+    width: 100%; /* Ancho completo */
+    max-width: 800px; /* Ancho máximo de la tabla */
+    margin: 30px auto; /* Centrar horizontalmente con margen superior/inferior */
+    border-collapse: separate; /* Separar bordes para poder redondear esquinas */
+    border-spacing: 0; /* Quitar espacio interno de las celdas */
+    border-radius: 16px; /* Bordes redondeados de la tabla */
+    overflow: hidden; /* Evitar que sobresalga contenido */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra suave de la tabla */
+}
+
+th {
+    background-color: #2e7d32; /* Fondo del encabezado */
+    color: white; /* Color del texto */
+    font-weight: 500; /* Peso de fuente */
+    padding: 16px; /* Espaciado interno */
+    text-align: center; /* Centrado del texto */
+}
+
+td {
+    padding: 13px 15px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Fondo de las celdas */
+    color: #333; /* Color de texto */
+    border-bottom: 1px solid #ddd; /* Línea divisoria inferior */
+}
+
+tr:nth-child(even) td {
+    background-color: #e8f5e9; /* Color alterno de fila */
+}
+
+tr:hover td {
+    background-color: #badfbb; /* Color al pasar el mouse */
+    transition: 0.3s; /* Transición suave */
+}
+
+/* ========================
+   GALERÍA MODERNA TABLA 
+======================== */
+.galeria-columnas {
+    display: grid; /* Uso de grid */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Columnas adaptables */
+    gap: 20px; /* Espacio entre columnas */
+    margin-top: 20px; /* Margen superior */
+}
+
+.galeria-columnas img {
+    width: 100%; /* Imagen ocupa ancho completo de la columna */
+    height: 150px; /* Altura fija */
+    object-fit: cover; /* Recorta imagen sin deformar */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s; /* Transición suave al hacer hover */
+}
+
+.galeria-columnas img:hover {
+    transform: scale(1.05); /* Zoom al pasar el mouse */
+}
+
+/* ========================
+   FOOTER
+======================== */
+footer {
+    background-color: #050505; /* Fondo del footer */
+    color: white; /* Color del texto */
+    text-align: center; /* Texto centrado */
+    padding: 15px 0; /* Espaciado vertical */
+    margin-top: 40px; /* Separación superior */
+    font-size: 0.9rem; /* Tamaño de fuente */
+}
